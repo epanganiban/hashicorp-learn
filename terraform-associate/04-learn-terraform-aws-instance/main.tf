@@ -1,4 +1,10 @@
 terraform {
+  backend "remote" {
+      organization = "Quadrivium"
+      workspaces {
+          name = "hashicorp-learn"
+      }
+  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
