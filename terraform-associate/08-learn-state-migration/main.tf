@@ -8,6 +8,14 @@ terraform {
     }
   }
   required_version = "~> 1.0"
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "Quadrivium"
+
+    workspaces {
+      name = "state-migration"
+    }
+  }
 }
 
 variable "name_length" {
