@@ -14,6 +14,7 @@ data "aws_region" "current" { }
 
 data "aws_availability_zones" "available" {
   state = "available"
+  exclude_names = [ "ap-northeast-2b" ]
 }
 
 module "vpc" {
