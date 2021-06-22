@@ -8,7 +8,7 @@ terraform {
 }
 
 provider aws {
-  region = "us-west-1"
+  region = "ap-northeast-2"
 }
 
 data "aws_ami" "amazon_linux" {
