@@ -17,7 +17,7 @@ provider "docker" {
 
 resource "docker_container" "web" {
   name  = "hashicorp-learn"
-  image = "sha256:4f380adfc10f4cd34f775ae57a17d2835385efd5251d6dfe0f246b0018fb0399"
+  image = docker_image.nginx.latest
 
   env = []
 
@@ -25,4 +25,8 @@ resource "docker_container" "web" {
     external = 8080
     internal = 80
   }
+}
+
+resource "docker_image" "nginx" {
+  name = "nginx:latest"
 }
