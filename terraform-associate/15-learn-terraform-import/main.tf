@@ -11,4 +11,8 @@ terraform {
 required_version = "~> 1.0"
 }
 
+provider "docker" {
+  host = "tcp://localhost:2375/"
+}
+
 resource "docker_container" "web" {}
