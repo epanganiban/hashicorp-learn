@@ -5,7 +5,7 @@ terraform {
       version = ">= 3.24.1"
     }
   }
-  required_version = "~> 0.14"
+  required_version = ">= 0.14"
 }
 
 provider "aws" {
@@ -30,7 +30,8 @@ data "aws_ami" "ubuntu" {
 
 resource "aws_key_pair" "deployer" {
   key_name   = "deployer-key"
-  public_key = file("${path.module}/key.pub")
+  # public_key = file("${path.module}/key.pub")
+  public_key = file("${path.module}/../../../../../../.ssh/id_rsa.pub")
 }
 
 resource "aws_instance" "example" {
