@@ -22,7 +22,7 @@ resource "docker_container" "web" {
   env = []
 
   ports {
-    external = 8080
+    external = 8081
     internal = 80
   }
 }
