@@ -68,3 +68,14 @@ resource "cloudflare_record" "www" {
   ttl     = 1
   proxied = true
 }
+
+resource "cloudflare_page_rule" "redirect-to-learn" {
+  zone_id = data.cloudflare_zones.domain.zones[0].id
+  target  = "${var.site_domain}/learn"
+  actions {
+    forwarding_url {
+      status_code = 302
+      url         = "https://learn.hashicorp.com/terraform"
+    }
+  }
+}
