@@ -17,7 +17,7 @@ users:
     groups: users, admin
     lock_passwd: false
     ssh_authorized_keys:
-      - ssh-rsa AAAAHHHHHH
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDc4WnT7ptfd6W4zIX1uvsUwqW91rbGSd5dY6T86v2nX/09QWh0DZfXP/VGHDMrxpSV4ivoDnyfVU9Rr0UgeDKyOsIpMowh3iEEB83BTPPQ8HAdAh46S0xTUuaahsbkkFNpRP0iulI37I3aJbtuvNCwOnjrYOYa0nP92FQwGNlJ7QR1zlzVgVQJtVQjj9VJugyGGr2yvkiJ+w/MtJMowm238DxIuClbfe9dGwoagHxSkrnw+w9Iq16xCw1AwR64M9OK21gd80YgNdL9ODfXF5rCRB7joXZSU9LnVYK4iQwgmJ/g/96/RiPNhczqKaXeztGJ80p/hFJEy6LvVFPBW/NtZ9WF4xKljx4iYwIUvwf0iwsj3vZVZf59FpUOVpKwiBViQVlSxL/DuUpLJpTR6yQZahlepyBlzZFIFPqTW4qz+ZOJqe31SvDiXyNosHr/nv4EGYea9DEiCvr3ftoiwn3miwQVK4AXn8sPesdHou3tpZBNnwnIadSxXXYbgnAWUwU= earl@quadrivium.xyz
 
 # Downloads the golang package
 packages:
