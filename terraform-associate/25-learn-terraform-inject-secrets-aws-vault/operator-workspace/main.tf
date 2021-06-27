@@ -1,5 +1,5 @@
 variable "name" { default = "dynamic-aws-creds-operator" }
-variable "region" { default = "us-east-1" }
+variable "region" { default = "ap-northeast-2" }
 variable "path" { default = "../vault-admin-workspace/terraform.tfstate" }
 variable "ttl" { default = "1" }
 
@@ -47,7 +47,7 @@ data "aws_ami" "ubuntu" {
 # Create AWS EC2 Instance
 resource "aws_instance" "main" {
   ami           = data.aws_ami.ubuntu.id
-  instance_type = "t2.nano"
+  instance_type = "t2.micro"
 
   tags = {
     Name  = var.name
