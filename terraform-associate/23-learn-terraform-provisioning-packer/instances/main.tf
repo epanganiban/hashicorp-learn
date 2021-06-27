@@ -5,7 +5,7 @@ terraform {
       version = "~> 3.26.0"
     }
   }
-  required_version = "~> 0.14.5"
+  required_version = ">= 0.14.5"
 }
 
 provider "aws" {
@@ -76,7 +76,7 @@ resource "aws_security_group" "sg_22_80" {
 }
 
 resource "aws_instance" "web" {
-  ami                         = "ami-YOUR-AMI-ID"
+  ami                         = "ami-0591af782cf3b0919"
   instance_type               = "t2.micro"
   subnet_id                   = aws_subnet.subnet_public.id
   vpc_security_group_ids      = [aws_security_group.sg_22_80.id]
